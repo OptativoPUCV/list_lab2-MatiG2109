@@ -76,6 +76,7 @@ void pushFront(List * list, const void * data) {
    if(list->head){
      list->head->prev=nuevoNodo;
    }
+   list->head=nuevoNodo;
 
 }
 
