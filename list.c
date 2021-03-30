@@ -35,14 +35,15 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  if(list->head==NULL){
+  if(list->head==NULL){ //validacion de el primer elemento de la lista
       return NULL;
   }
-  list->current=list->head;
+  list->current=list->head; //asignar el valor head al current
   return (void *)list->current->data;
 }
 
 void * nextList(List * list) {
+
     return NULL;
 }
 
