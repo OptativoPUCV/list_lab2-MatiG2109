@@ -37,13 +37,14 @@ List * createList() {
 void * firstList(List * list) {
   if(list->head==NULL){ //validacion de el primer elemento de la lista
       return NULL;
-  }
+  }else{
   list->current=list->head; //asignar el valor head al current
   return (void *)list->current->data;
+  }
 }
 
 void * nextList(List * list) {
-  if(list->current && list->current->next != NULL){
+  if(list->current && list->current->next!=NULL){
     list->current=list->current->next;
   }else{
     return NULL;
@@ -52,7 +53,10 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
+  if(list->tail==NULL){
     return NULL;
+  }
+    return (void *)list->current->data;
 }
 
 void * prevList(List * list) {
